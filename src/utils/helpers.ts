@@ -1,4 +1,4 @@
-import { ColumnType } from "./enums";
+import { ColumnType, DoingColor, DoneColor, TaskColor } from "./enums";
 import { TColor } from "./interface";
 
 const colors = [
@@ -27,7 +27,7 @@ export function pickChakraRandomColor(variant = '') {
 }
 
 export const ColumnColorScheme: Record<ColumnType, TColor> = {
-  Task: { bg: '#FEF4F3', colorTitle: '#6E1E29', colorText: '#D4AFB4', colorBtn: '#D37A86' },
-  Doing: { bg: '#FFFBF2', colorTitle: '#795B19', colorText: '#DECBA3', colorBtn: '#C2A25A' },
-  Done: { bg: '#F4F9F3', colorTitle: '#286C1A', colorText: '#BBD6B6', colorBtn: '#286C1A' },
+  Task: TaskColor,
+  Doing: DoingColor,
+  Done: DoneColor,
 };

@@ -1,4 +1,4 @@
-import { CloseIcon, DeleteIcon } from "@chakra-ui/icons";
+import { CloseIcon } from "@chakra-ui/icons";
 import { Box, Checkbox, IconButton, ScaleFade } from "@chakra-ui/react";
 import _ from "lodash";
 import { memo } from "react";
@@ -43,7 +43,7 @@ function Task({
   const handleCompleteTask = (event: React.ChangeEvent<HTMLInputElement>) => {
     handleComplete(column, task?.id, event.target.checked);
   };
-  
+
   return (
     <ScaleFade in={true} unmountOnExit>
       <Box
@@ -72,8 +72,7 @@ function Task({
         />
         <IconButton
           position="absolute"
-          top={"7px"}
-          right={0}
+          right={1}
           zIndex={100}
           aria-label="delete-task"
           size="xs"
@@ -95,7 +94,7 @@ function Task({
           sx={{ boxShadow: "none !important" }}
           focusBorderColor="none"
           onChange={handleTitleChange}
-          className={task?.isComplete ? "line-through" : ""}
+          style={{ textDecorationLine: task?.isComplete ? "line-through" : "" }}
         />
       </Box>
     </ScaleFade>

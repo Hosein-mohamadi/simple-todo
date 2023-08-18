@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "PORT=5000 next dev",
+    "dev": "SET PORT=5000 && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -17,6 +17,7 @@
     "autoprefixer": "10.4.15",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.18",
+    "lodash": "^4.17.21",
     "next": "13.4.18",
     "postcss": "8.4.28",
     "react": "18.2.0",

@@ -1,13 +1,5 @@
 import { AddIcon } from "@chakra-ui/icons";
-import {
-  Badge,
-  Box,
-  Button,
-  Heading,
-  IconButton,
-  Stack,
-  useColorModeValue,
-} from "@chakra-ui/react";
+import { Box, Button, Stack } from "@chakra-ui/react";
 import { Text } from "@chakra-ui/react";
 import Task from "./Task";
 import { ColumnColorScheme } from "../utils/helpers";
@@ -48,7 +40,9 @@ function Column({ column }: { column: ColumnType }) {
       addNewTask(pastedText, column);
     }
   };
+  
   const colors = ColumnColorScheme[column];
+  
   return (
     <div>
       <Stack

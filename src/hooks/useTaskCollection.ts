@@ -1,7 +1,7 @@
 import { useLocalStorage } from 'usehooks-ts';
 
 import { v4 as uuidv4 } from 'uuid';
-import { ColumnType } from '../utils/enums';
+import { ColumnType, DoingColor, DoneColor, TaskColor } from '../utils/enums';
 import { TaskModel } from '../utils/models';
 
 function useTaskCollection() {
@@ -12,8 +12,22 @@ function useTaskCollection() {
       {
         id: uuidv4(),
         column: ColumnType.TASK,
-        title: 'Task',
-        color: { bg: '#FEF4F3', colorTitle: '#6E1E29', colorText: '#D4AFB4', colorBtn: '#D37A86' },
+        title: 'Start with meditation, exercise & breakfast for a productive day',
+        color: TaskColor,
+        isComplete: false
+      },
+      {
+        id: uuidv4(),
+        column: ColumnType.TASK,
+        title: 'Read to learn something new every day',
+        color: TaskColor,
+        isComplete: false
+      },
+      {
+        id: uuidv4(),
+        column: ColumnType.TASK,
+        title: 'Learn something fresh & relevant',
+        color: TaskColor,
         isComplete: false
       },
     ],
@@ -21,8 +35,15 @@ function useTaskCollection() {
       {
         id: uuidv4(),
         column: ColumnType.DOING,
-        title: 'Doing',
-        color: { bg: '#FFFBF2', colorTitle: '#795B19', colorText: '#DECBA3', colorBtn: '#C2A25A' },
+        title: 'Engage & question in meetings',
+        color: DoingColor,
+        isComplete: false
+      },
+      {
+        id: uuidv4(),
+        column: ColumnType.DOING,
+        title: 'Use time-blocking for effective days',
+        color: DoingColor,
         isComplete: false
       },
     ],
@@ -30,8 +51,15 @@ function useTaskCollection() {
       {
         id: uuidv4(),
         column: ColumnType.DONE,
-        title: 'Done',
-        color: { bg: '#F4F9F3', colorTitle: '#286C1A', colorText: '#BBD6B6', colorBtn: '#286C1A' },
+        title: 'Finished online course - check!',
+        color: DoneColor,
+        isComplete: true
+      },
+      {
+        id: uuidv4(),
+        column: ColumnType.DONE,
+        title: 'Congratulate yourself for incorporating healthier habits into your lifestyle, like regular exercise or mindful eating',
+        color: DoneColor,
         isComplete: true
       },
     ],
